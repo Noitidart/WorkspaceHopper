@@ -1,0 +1,87 @@
+{
+ "enable_e10s": false, 
+ "is-sdk-bundled": true, 
+ "jetpackID": "jid0-WorkspaceHopper@jetpack", 
+ "loader": "addon-sdk/lib/sdk/loader/cuddlefish.js", 
+ "main": "main", 
+ "mainPath": "workspacehopper/main", 
+ "manifest": {
+  "workspacehopper/main": {
+   "docsSHA256": null, 
+   "jsSHA256": "c468e8066909b6c538c4257ce1df2f334cc2f6a35539e178d7e92cc91db110f2", 
+   "moduleName": "main", 
+   "packageName": "workspacehopper", 
+   "requirements": {
+    "chrome": "chrome"
+   }, 
+   "sectionName": "lib"
+  }
+ }, 
+ "metadata": {
+  "addon-sdk": {
+   "description": "Add-on development made easy.", 
+   "keywords": [
+    "javascript", 
+    "engine", 
+    "addon", 
+    "extension", 
+    "xulrunner", 
+    "firefox", 
+    "browser"
+   ], 
+   "license": "MPL 2.0", 
+   "name": "addon-sdk"
+  }, 
+  "workspacehopper": {
+   "author": "Noitidart", 
+   "description": "Keyboard shortcut to jump to last focused tab or window.", 
+   "main": "main", 
+   "name": "workspacehopper", 
+   "version": "1.3"
+  }
+ }, 
+ "name": "workspacehopper", 
+ "preferences": [
+  {
+   "description": "A key must be pressed twice within this much time(ms) to be counted as a double key press", 
+   "name": "dblSpeed", 
+   "title": "Double Key Press Speed", 
+   "type": "integer", 
+   "value": 300
+  }, 
+  {
+   "description": "Delay(ms) for a key to be held down before counting as held", 
+   "name": "holdTime", 
+   "title": "Hold Time", 
+   "type": "integer", 
+   "value": 300
+  }, 
+  {
+   "description": "Hop to last tab or window, depending on what was last used", 
+   "label": "Set Key", 
+   "name": "hotkey_hopGlobal", 
+   "title": "Hop Global", 
+   "type": "control", 
+   "value": "{keycode:19, action:'upped', mods:[]}"
+  }, 
+  {
+   "description": "If pressed when focused in a window without any tabs, it will hop to the last focused tab and its window", 
+   "label": "Set Key", 
+   "name": "hotkey_hopTabCurWin", 
+   "title": "Hop Tab in Current Window", 
+   "type": "control", 
+   "value": "{keycode:19, action:'held', mods:[]}"
+  }, 
+  {
+   "description": "Hop to last used window in focus history, even if a different tabs were used since focusing away from last window", 
+   "label": "Set Key", 
+   "name": "hotkey_hopWin", 
+   "title": "Hop Window", 
+   "type": "control", 
+   "value": "{keycode:0, action:'', mods:[]}"
+  }
+ ], 
+ "sdkVersion": "1.14", 
+ "staticArgs": {}, 
+ "verbose": false
+}

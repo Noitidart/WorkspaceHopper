@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<vbox xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <setting data-jetpack-id="jid0-WorkspaceHopper@jetpack" pref="extensions.jid0-WorkspaceHopper@jetpack.dblSpeed" pref-name="dblSpeed" title="Double Key Press Speed" type="integer">
+    A key must be pressed twice within this much time(ms) to be counted as a double key press
+  </setting>
+  <setting data-jetpack-id="jid0-WorkspaceHopper@jetpack" pref="extensions.jid0-WorkspaceHopper@jetpack.holdTime" pref-name="holdTime" title="Hold Time" type="integer">
+    Delay(ms) for a key to be held down before counting as held
+  </setting>
+  <setting data-jetpack-id="jid0-WorkspaceHopper@jetpack" pref="extensions.jid0-WorkspaceHopper@jetpack.hotkey_hopGlobal" pref-name="hotkey_hopGlobal" title="Hop Global" type="control">
+    Hop to last tab or window, depending on what was last used
+    <button data-jetpack-id="jid0-WorkspaceHopper@jetpack" label="Set Key" oncommand="Services.obs.notifyObservers(null, 'jid0-WorkspaceHopper@jetpack-cmdPressed', 'hotkey_hopGlobal');" pref-name="hotkey_hopGlobal"/>
+  </setting>
+  <setting data-jetpack-id="jid0-WorkspaceHopper@jetpack" pref="extensions.jid0-WorkspaceHopper@jetpack.hotkey_hopTabCurWin" pref-name="hotkey_hopTabCurWin" title="Hop Tab in Current Window" type="control">
+    If pressed when focused in a window without any tabs, it will hop to the last focused tab and its window
+    <button data-jetpack-id="jid0-WorkspaceHopper@jetpack" label="Set Key" oncommand="Services.obs.notifyObservers(null, 'jid0-WorkspaceHopper@jetpack-cmdPressed', 'hotkey_hopTabCurWin');" pref-name="hotkey_hopTabCurWin"/>
+  </setting>
+  <setting data-jetpack-id="jid0-WorkspaceHopper@jetpack" pref="extensions.jid0-WorkspaceHopper@jetpack.hotkey_hopWin" pref-name="hotkey_hopWin" title="Hop Window" type="control">
+    Hop to last used window in focus history, even if a different tabs were used since focusing away from last window
+    <button data-jetpack-id="jid0-WorkspaceHopper@jetpack" label="Set Key" oncommand="Services.obs.notifyObservers(null, 'jid0-WorkspaceHopper@jetpack-cmdPressed', 'hotkey_hopWin');" pref-name="hotkey_hopWin"/>
+  </setting>
+</vbox>
